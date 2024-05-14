@@ -1,0 +1,93 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "id",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint128",
+						"name": "network",
+						"type": "uint128"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "source",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "payload",
+						"type": "bytes"
+					}
+				],
+				"name": "onGmpReceived",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"onGmpReceived(bytes32,uint128,bytes32,bytes)": {
+					"details": "Handles the receipt of a single GMP message. The contract must verify the msg.sender, it must be the Gateway Contract address.",
+					"params": {
+						"id": "The EIP-712 hash of the message payload, used as GMP unique identifier",
+						"network": "The chain_id of the source chain that send the message",
+						"payload": "The message payload with no specified format",
+						"source": "The pubkey/address which sent the GMP message"
+					},
+					"returns": {
+						"_0": "32-byte result, which will be stored together with the GMP message"
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/IGmpReceiver.sol": "IGmpReceiver"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/IGmpReceiver.sol": {
+			"keccak256": "0xfff22c71a487b71a7d16d11dc3c7ff6d3ea02637c61cf9d2fc947e3241b0b386",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1513ac0f8991c0cad9e8debe7d6e88d756cd64e1cd499842b26d865cc5a322d1",
+				"dweb:/ipfs/QmTrGxDJgHicKvkrXicaQDrd4tEa6wo6DAbGB3tubaYmYt"
+			]
+		}
+	},
+	"version": 1
+}

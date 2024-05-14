@@ -1,0 +1,359 @@
+{
+	"id": "80f453abf424cb03f39c8e6d01c50fe5",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.25",
+	"solcLongVersion": "0.8.25+commit.b61c2a91",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/IGmpReceiver.sol": {
+				"content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\ninterface IGmpReceiver {\r\n    /**\r\n     * @dev Handles the receipt of a single GMP message.\r\n     * The contract must verify the msg.sender, it must be the Gateway Contract address.\r\n     *\r\n     * @param id The EIP-712 hash of the message payload, used as GMP unique identifier\r\n     * @param network The chain_id of the source chain that send the message\r\n     * @param source The pubkey/address which sent the GMP message\r\n     * @param payload The message payload with no specified format\r\n     * @return 32-byte result, which will be stored together with the GMP message\r\n     */\r\n    function onGmpReceived(bytes32 id, uint128 network, bytes32 source, bytes calldata payload)\r\n        external\r\n        payable\r\n        returns (bytes32);\r\n}"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"contracts": {
+			"contracts/IGmpReceiver.sol": {
+				"IGmpReceiver": {
+					"abi": [
+						{
+							"inputs": [
+								{
+									"internalType": "bytes32",
+									"name": "id",
+									"type": "bytes32"
+								},
+								{
+									"internalType": "uint128",
+									"name": "network",
+									"type": "uint128"
+								},
+								{
+									"internalType": "bytes32",
+									"name": "source",
+									"type": "bytes32"
+								},
+								{
+									"internalType": "bytes",
+									"name": "payload",
+									"type": "bytes"
+								}
+							],
+							"name": "onGmpReceived",
+							"outputs": [
+								{
+									"internalType": "bytes32",
+									"name": "",
+									"type": "bytes32"
+								}
+							],
+							"stateMutability": "payable",
+							"type": "function"
+						}
+					],
+					"devdoc": {
+						"kind": "dev",
+						"methods": {
+							"onGmpReceived(bytes32,uint128,bytes32,bytes)": {
+								"details": "Handles the receipt of a single GMP message. The contract must verify the msg.sender, it must be the Gateway Contract address.",
+								"params": {
+									"id": "The EIP-712 hash of the message payload, used as GMP unique identifier",
+									"network": "The chain_id of the source chain that send the message",
+									"payload": "The message payload with no specified format",
+									"source": "The pubkey/address which sent the GMP message"
+								},
+								"returns": {
+									"_0": "32-byte result, which will be stored together with the GMP message"
+								}
+							}
+						},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"gasEstimates": null,
+						"legacyAssembly": null,
+						"methodIdentifiers": {
+							"onGmpReceived(bytes32,uint128,bytes32,bytes)": "01900937"
+						}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.25+commit.b61c2a91\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"id\",\"type\":\"bytes32\"},{\"internalType\":\"uint128\",\"name\":\"network\",\"type\":\"uint128\"},{\"internalType\":\"bytes32\",\"name\":\"source\",\"type\":\"bytes32\"},{\"internalType\":\"bytes\",\"name\":\"payload\",\"type\":\"bytes\"}],\"name\":\"onGmpReceived\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"payable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"onGmpReceived(bytes32,uint128,bytes32,bytes)\":{\"details\":\"Handles the receipt of a single GMP message. The contract must verify the msg.sender, it must be the Gateway Contract address.\",\"params\":{\"id\":\"The EIP-712 hash of the message payload, used as GMP unique identifier\",\"network\":\"The chain_id of the source chain that send the message\",\"payload\":\"The message payload with no specified format\",\"source\":\"The pubkey/address which sent the GMP message\"},\"returns\":{\"_0\":\"32-byte result, which will be stored together with the GMP message\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/IGmpReceiver.sol\":\"IGmpReceiver\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/IGmpReceiver.sol\":{\"keccak256\":\"0xfff22c71a487b71a7d16d11dc3c7ff6d3ea02637c61cf9d2fc947e3241b0b386\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1513ac0f8991c0cad9e8debe7d6e88d756cd64e1cd499842b26d865cc5a322d1\",\"dweb:/ipfs/QmTrGxDJgHicKvkrXicaQDrd4tEa6wo6DAbGB3tubaYmYt\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [],
+						"types": null
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"contracts/IGmpReceiver.sol": {
+				"ast": {
+					"absolutePath": "contracts/IGmpReceiver.sol",
+					"exportedSymbols": {
+						"IGmpReceiver": [
+							16
+						]
+					},
+					"id": 17,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "33:23:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"canonicalName": "IGmpReceiver",
+							"contractDependencies": [],
+							"contractKind": "interface",
+							"fullyImplemented": false,
+							"id": 16,
+							"linearizedBaseContracts": [
+								16
+							],
+							"name": "IGmpReceiver",
+							"nameLocation": "68:12:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"documentation": {
+										"id": 2,
+										"nodeType": "StructuredDocumentation",
+										"src": "88:554:0",
+										"text": " @dev Handles the receipt of a single GMP message.\n The contract must verify the msg.sender, it must be the Gateway Contract address.\n @param id The EIP-712 hash of the message payload, used as GMP unique identifier\n @param network The chain_id of the source chain that send the message\n @param source The pubkey/address which sent the GMP message\n @param payload The message payload with no specified format\n @return 32-byte result, which will be stored together with the GMP message"
+									},
+									"functionSelector": "01900937",
+									"id": 15,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "onGmpReceived",
+									"nameLocation": "657:13:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 11,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 4,
+												"mutability": "mutable",
+												"name": "id",
+												"nameLocation": "679:2:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 15,
+												"src": "671:10:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_bytes32",
+													"typeString": "bytes32"
+												},
+												"typeName": {
+													"id": 3,
+													"name": "bytes32",
+													"nodeType": "ElementaryTypeName",
+													"src": "671:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_bytes32",
+														"typeString": "bytes32"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 6,
+												"mutability": "mutable",
+												"name": "network",
+												"nameLocation": "691:7:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 15,
+												"src": "683:15:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint128",
+													"typeString": "uint128"
+												},
+												"typeName": {
+													"id": 5,
+													"name": "uint128",
+													"nodeType": "ElementaryTypeName",
+													"src": "683:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint128",
+														"typeString": "uint128"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 8,
+												"mutability": "mutable",
+												"name": "source",
+												"nameLocation": "708:6:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 15,
+												"src": "700:14:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_bytes32",
+													"typeString": "bytes32"
+												},
+												"typeName": {
+													"id": 7,
+													"name": "bytes32",
+													"nodeType": "ElementaryTypeName",
+													"src": "700:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_bytes32",
+														"typeString": "bytes32"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 10,
+												"mutability": "mutable",
+												"name": "payload",
+												"nameLocation": "731:7:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 15,
+												"src": "716:22:0",
+												"stateVariable": false,
+												"storageLocation": "calldata",
+												"typeDescriptions": {
+													"typeIdentifier": "t_bytes_calldata_ptr",
+													"typeString": "bytes"
+												},
+												"typeName": {
+													"id": 9,
+													"name": "bytes",
+													"nodeType": "ElementaryTypeName",
+													"src": "716:5:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_bytes_storage_ptr",
+														"typeString": "bytes"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "670:69:0"
+									},
+									"returnParameters": {
+										"id": 14,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 13,
+												"mutability": "mutable",
+												"name": "",
+												"nameLocation": "-1:-1:-1",
+												"nodeType": "VariableDeclaration",
+												"scope": 15,
+												"src": "793:7:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_bytes32",
+													"typeString": "bytes32"
+												},
+												"typeName": {
+													"id": 12,
+													"name": "bytes32",
+													"nodeType": "ElementaryTypeName",
+													"src": "793:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_bytes32",
+														"typeString": "bytes32"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "792:9:0"
+									},
+									"scope": 16,
+									"src": "648:154:0",
+									"stateMutability": "payable",
+									"virtual": false,
+									"visibility": "external"
+								}
+							],
+							"scope": 17,
+							"src": "58:747:0",
+							"usedErrors": [],
+							"usedEvents": []
+						}
+					],
+					"src": "33:772:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}
