@@ -1,0 +1,17 @@
+{
+  "type": "module",
+  "name": "analog",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@analog-labs/timegraph-js": "^0.1.1",
+    "@analog-labs/timegraph-wasm": "^1.0.0",
+    "@polkadot/keyring": "^12.6.2",
+    "@polkadot/util": "^12.6.2"
+  }
+}
